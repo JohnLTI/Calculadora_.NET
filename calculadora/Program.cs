@@ -32,7 +32,7 @@ namespace calculadora
                 case 2: Subtracao(); break;
                 case 3: Divisao(); break;
                 case 4: Multiplicacao(); break;
-                case 5: System.Environment.Exit(0); break;
+                case 5: Saida(); break;
                 default: Menu(); break;
 
             }
@@ -54,6 +54,7 @@ namespace calculadora
             float resultado = v1 + v2;
             // Console.WriteLine("O resultado da soma é " + resultado);
             Console.WriteLine($"O resultado da soma é {resultado}"); //CIFRÃO PERMITE UTILIZAR CHAVES PARA INTERPORLAR VARIÁVEL AO TEXTO
+            Console.WriteLine("");
             Console.WriteLine("Aperte qualquer Tecla para voltar ao Menu inicial");
             Console.ReadKey();
             Menu();
@@ -74,6 +75,7 @@ namespace calculadora
 
             float resultado = v1 - v2;
             Console.WriteLine($"O resultado da subtração é {resultado}");
+            Console.WriteLine("");
             Console.WriteLine("Aperte qualquer Tecla para voltar ao Menu inicial");
             Console.ReadKey();
             Menu();
@@ -94,6 +96,7 @@ namespace calculadora
 
             float resultado = v1 / v2;
             Console.WriteLine($"O resultado da divisão é: {resultado}");
+            Console.WriteLine("");
             Console.WriteLine("Aperte qualquer Tecla para voltar ao Menu inicial");
             Console.ReadKey();
             Menu();
@@ -114,9 +117,17 @@ namespace calculadora
 
             float resultado = v1 * v2;
             Console.WriteLine($"O resultado da multiplicação é: {resultado}");
+            Console.WriteLine("");
             Console.WriteLine("Aperte qualquer Tecla para voltar ao Menu inicial");
             Console.ReadKey();
             Menu();
+        }
+        static void Saida()
+        {
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Programa encerrado com Sucesso!");
+            Console.WriteLine("---------------------");
+            System.Environment.Exit(0);
         }
     }
 }
